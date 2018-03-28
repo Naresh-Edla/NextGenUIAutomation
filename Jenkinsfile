@@ -6,5 +6,10 @@ pipeline {
         sh 'ls'
       }
     }
+    stage('Test') {
+      steps {
+        echo 'Done'
+      }
+    }
   }
 }
