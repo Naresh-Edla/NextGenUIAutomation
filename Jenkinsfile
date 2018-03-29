@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'master'
+    }
+    
+  }
   stages {
     stage('build') {
       steps {
@@ -8,7 +13,8 @@ pipeline {
     }
     stage('Test') {
       steps {
-        echo 'Done'
+        sh 'echo "Code Analyser"'
+        sh 'echo "Unit Test"'
       }
     }
   }
